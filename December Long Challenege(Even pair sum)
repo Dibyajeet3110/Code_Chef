@@ -1,0 +1,24 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a,b,c,d,p;
+    cin>>a>>b>>c>>d>>p;
+    int x=0,j=0;
+    while(x<p)
+    {j++;
+        if(a<=j||c<=j)
+        {
+            if(a<=j)
+            {
+                x=x+b;
+            }
+            if(c<=j)
+            {
+                x=x+d;
+            }
+        }
+
+    }
+    cout<<j;
+}
