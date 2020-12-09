@@ -1,27 +1,74 @@
 #include<iostream>
-#include<math.h>
+#include<stdlib.h>
 using namespace std;
 int main()
-{int t;
-cin>>t;
-while(t--)
 {
-    int n,x,k=0,j=0;
-    cin>>n>>x;
-    int a[n];
-    for(int i=0;i<n;i++)
+    int t,j;
+    cin>>t;
+    while(t--)
     {
-        cin>>a[i];
+        int n,k,i,c=0;
+        cin>>n>>k;
+        int a[n+1];
+        for(i=1;i<=n;i++)
+        {
+            a[i]=i;
+        }
+        if(k==n)
+        {
+        {for(i=1;i<=n;i++)
+            {
+                cout<<a[i]<<" ";
+            }
+            cout<<endl;
+
+        }
+        }
+        else
+        {
+        int d=n-k;
+        for(i=3;i<=n;i+=2)
+        {if(c!=d)
+        {
+         a[i]=-i; 
+         c++;  
+        }
+        }
+        if(c<d)
+        {
+            for(i=n;i>=1;i--)
+            {if(c<d)
+            {
+                if(a[i]>0)
+                {
+                    a[i]=-i;
+                    c++;
+                }
+                else{
+                    continue;
+                }
+            }
+            else{
+                break;
+            }
+            }
+        
+         for(i=1;i<=n;i++)
+            {
+                cout<<a[i]<<" ";
+            }
+            cout<<endl;
+        
+        }
+    
+        else{
+            for(i=1;i<=n;i++)
+            {
+                cout<<a[i]<<" ";
+            }
+            cout<<endl;
+        }
     }
-    for(int i=0;i<n;i++)
-    {
-      if(a[i]<80 && a[i]>9)
-    {++k;
-      }
-      else{
-          j++;
-      }
-    }
-    cout<<ceil((float)j/x)+ceil((float)k/x)<<endl;
+
 }
 }
