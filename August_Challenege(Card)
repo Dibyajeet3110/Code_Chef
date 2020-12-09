@@ -1,0 +1,42 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;int x,y;
+    while(n--)
+    {
+        cin>>x;
+        cin>>y;
+        int a,b;
+        if(x%9!=0)
+        {
+            a=x/9;
+            a=a+1;
+        }
+        else{
+            a=x/9;
+
+        }
+        if(y%9!=0)
+        {
+        b=y/9;
+        b=b+1;
+        }
+        else
+        {b=y/9;
+        }
+        if(a==b)
+        {
+            cout<<"1"<<" "<<b<<endl;
+        }
+        else if(a>b)
+        {
+            cout<<"1"<<" "<<b<<endl; 
+        }
+        else{
+            cout<<"0"<<" "<<a<<endl;
+        }
+
+    }return 0;
+}
